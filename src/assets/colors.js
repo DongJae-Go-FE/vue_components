@@ -1,0 +1,107 @@
+const colors = {
+  primary100: "#ff94a9",
+  primary200: "#ff7a94",
+  primary400: "#ff617f",
+  primary300: "#ff476a",
+  primary500: "#ff2d55",
+  primary600: "#f91a45",
+  primary700: "#ed0c38",
+  primary800: "#d01136",
+  primary900: "#b31433",
+
+  gray100: "#fafafa",
+  gray200: "#eeeeee",
+  gray300: "#dddddd",
+  gray400: "#bbbbbb",
+  gray500: "#999999",
+  gray600: "#777777",
+  gray700: "#555555",
+  gray800: "#333333",
+  gray900: "#111111",
+
+  white: "#ffffff",
+  black: "#000000",
+
+  grayDimmedEffectBlack85D: "rgba(0, 0, 0, 0.85)",
+  grayDimmedEffectBlack70D: "rgba(0, 0, 0, 0.7)",
+  grayDimmedEffectBlack30D: "rgba(0, 0, 0, 0.3)",
+
+  green100: "#72ee90",
+  green200: "#5fe781",
+  green300: "#4edf72",
+  green400: "#3fd564",
+  green500: "#34c759",
+  green600: "#34ad52",
+  green700: "#33944b",
+  green800: "#317d44",
+  green900: "#2d673c",
+
+  blue100: "#66afff",
+  blue200: "#4da2ff",
+  blue300: "#3395ff",
+  blue400: "#1a87ff",
+  blue500: "#007aff",
+  blue600: "#066ee0",
+  blue700: "#1462b8",
+  blue800: "#16569c",
+  blue900: "#174a82",
+
+  red100: "#ff9a94",
+  red200: "#ff817a",
+  red300: "#ff6961",
+  red400: "#ff5147",
+  red500: "#ff3b30",
+  red600: "#f9261a",
+  red700: "#ed190c",
+  red800: "#d01b11",
+  red900: "#b31c14",
+
+  orange100: "#ffbf66",
+  orange200: "#ffb54d",
+  orange300: "#ffaa33",
+  orange400: "#ffa01a",
+  orange500: "#ff9500",
+  orange600: "#e08506",
+  orange700: "#c2750a",
+  orange800: "#a5660d",
+  orange900: "#8a570f",
+
+  data01: "#464f69",
+  data02: "#af52de",
+  data03: "#5856d6",
+  data04: "#007aff",
+  data05: "#34c759",
+  data06: "#34c759",
+  data07: "#8ad74e",
+  data08: "#ffcc00",
+  data09: "#ff9500",
+  data10: "#ff3b30",
+
+  plus100: "#ff9a94",
+  plus200: "#ff817a",
+  plus300: "#ff6961",
+  plus400: "#ff5147",
+  plus500: "#ff3b30",
+  plus600: "#f9261a",
+  plus700: "#ed190c",
+  plus800: "#d01b11",
+  plus900: "#b31c14",
+
+  minus100: "#66afff",
+  minus200: "#4da2ff",
+  minus300: "#3395ff",
+  minus400: "#1a87ff",
+  minus500: "#007aff",
+  minus600: "#066ee0",
+  minus700: "#1462b8",
+  minus800: "#16569c",
+  minus900: "#174a82",
+};
+
+const getColor = (cssKey, colorKey) => {
+  return `
+    ${cssKey}: ${colors[colorKey]};
+    `;
+};
+
+export { getColor, colors };
