@@ -16,7 +16,7 @@ export default {
     SearchSvg,
   },
   methods: {},
-  props: { id: String, label: String, placeholder: String }, 
+  props: { id: String, label: String, placeholder: String },
   data() {
     return {
       search: null,

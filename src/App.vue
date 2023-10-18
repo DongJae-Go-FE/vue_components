@@ -12,6 +12,34 @@
   <IconButton icon="rss" />
   <ListText :listData="list2" />
   <Dim />
+  <Header />
+  <Content>
+    <LeftArea/>
+    <div>
+      <SortArea/>
+      <div>
+        <ul>
+          <li>asd</li>
+          <li>asd</li>
+          <li>asd</li>
+          <li>asd</li>
+          <li>asd</li>
+          <li>asd</li>
+          <li>asd</li>
+          <li>asd</li>
+          <li>asd</li>
+          <li>asd</li>
+          <li>asd</li>
+          <li>asd</li>
+          <li>asd</li>
+          <li>asd</li>
+          <li>asd</li>
+          <li>asd</li>
+          
+        </ul>
+      </div>
+    </div>
+  </Content>
 </template>
 
 <script>
@@ -23,7 +51,13 @@ import Dropdown from "./components/atoms/Dropdown/Dropdown.vue";
 import Dim from "./components/atoms/Dim/Dim.vue";
 import IconButton from "./components/atoms/IconButton/IconButton.vue";
 import ListText from "./components/atoms/ListText/ListText.vue";
+import Header from "./components/organism/Header/Header.vue";
+import Content from "./components/organism/Content/Content.vue"
+import LeftArea from './components/organism/LeftArea/LeftArea.vue';
+import SortArea from './components/organism/SortArea/SortArea.vue';
+
 import "../src/assets/global.css";
+
 
 export default {
   name: "App",
@@ -36,6 +70,10 @@ export default {
     Dim,
     IconButton,
     ListText,
+    Header,
+    Content,
+    LeftArea,
+    SortArea,
   },
   data() {
     return {
