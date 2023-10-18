@@ -12,11 +12,13 @@
   <IconButton icon="rss" />
   <ListText :listData="list2" />
   <Dim />
+  <Radio name="test" id="radio" value="radio"/>
+  <Pagenation/>
   <Header />
   <Content>
-    <LeftArea/>
+    <LeftArea />
     <div>
-      <SortArea/>
+      <SortArea />
       <div>
         <ul>
           <li>asd</li>
@@ -35,7 +37,6 @@
           <li>asd</li>
           <li>asd</li>
           <li>asd</li>
-          
         </ul>
       </div>
     </div>
@@ -52,12 +53,13 @@ import Dim from "./components/atoms/Dim/Dim.vue";
 import IconButton from "./components/atoms/IconButton/IconButton.vue";
 import ListText from "./components/atoms/ListText/ListText.vue";
 import Header from "./components/organism/Header/Header.vue";
-import Content from "./components/organism/Content/Content.vue"
-import LeftArea from './components/organism/LeftArea/LeftArea.vue';
-import SortArea from './components/organism/SortArea/SortArea.vue';
+import Content from "./components/organism/Content/Content.vue";
+import LeftArea from "./components/organism/LeftArea/LeftArea.vue";
+import SortArea from "./components/organism/SortArea/SortArea.vue";
+import Radio from "./components/atoms/Radio/Radio.vue";
+import Pagenation from "./components/molecule/Pagenation/Pagenation.vue"
 
 import "../src/assets/global.css";
-
 
 export default {
   name: "App",
@@ -74,6 +76,8 @@ export default {
     Content,
     LeftArea,
     SortArea,
+    Radio,
+    Pagenation,
   },
   data() {
     return {
