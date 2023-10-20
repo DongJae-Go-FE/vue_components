@@ -35,7 +35,7 @@ import ListStyled from "./styledList";
 import DownSvg from "./DownSvg";
 import vClickOutside from "click-outside-vue3";
 export default {
-  name: "DropDown",
+  name: "DropDownComponent",
   directives: {
     clickOutside: vClickOutside.directive,
   },

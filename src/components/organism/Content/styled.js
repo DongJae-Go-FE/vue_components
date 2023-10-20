@@ -6,37 +6,31 @@ const Styled = styled.div`
   display: flex;
   gap: 0 24px;
   width: 100%;
-  height: 100vh;
+  height: auto;
   padding: 24px;
   ${getColor("background-color", "gray100")};
 
   > div {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 20px;
-
-    &:nth-child(2){
+    &:nth-child(2) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px 0;
+      align-content: baseline;
       width: calc(100% - 464px);
     }
 
     > div {
+      width: 100%;
       &:nth-child(2) {
         > ul {
-          display: flex;
-          flex-wrap: wrap;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
           gap: 16px;
           width: 100%;
           height: 100%;
 
           list-style: none;
 
-          li {
-            width: 340px;
-            height: 179px;
-            border-radius: 16px;
-            ${getColor("background-color", "white")};
-            box-shadow: 0px 0px 48px 0px rgba(0, 0, 0, 0.08);
-          }
         }
       }
     }

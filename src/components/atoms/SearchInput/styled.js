@@ -24,6 +24,7 @@ const StyledTag = styled.div`
   }
 
   input {
+    width: 248px;
     padding: 0 8px;
     background-color: transparent;
     border: none;

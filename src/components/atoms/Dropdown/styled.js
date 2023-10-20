@@ -11,6 +11,7 @@ const StyledDropDown = styled.div`
 
     border: 1px solid;
     ${getColor("border-color", "gray200")}
+    ${getColor("background-color", "white")}
 
     svg {
       transition: 0.2s;
@@ -80,8 +81,10 @@ const StyledDropDown = styled.div`
           `;
         case "large":
           return css`
-            padding: 0px 16px;
+            justify-content: space-between;
+            width: 128px;
             height: 48px;
+            padding: 0px 16px;
             border-radius: 6px;
             ${typography.body01M}
             svg {

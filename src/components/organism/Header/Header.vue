@@ -3,13 +3,13 @@
     <h1><LogoSvg /></h1>
     <div>
       <ul>
-        <li><TextButton text="통합관제" /></li>
-        <li><TextButton text="단지별관제" /></li>
+        <li><button type="button">통합관제</button></li>
+        <li><button type="button">단지별관제</button></li>
       </ul>
       <div>
         <ul>
-          <li><Button text="Data" /></li>
-          <li><Button text="Maps" /></li>
+          <li><Button text="Data" size="small" color="gray01" /></li>
+          <li><Button text="Maps" size="small" color="gray02" /></li>
         </ul>
         <IconButton icon="peoples" iconText="내정보 아이콘" />
       </div>
@@ -20,7 +20,6 @@
 <script>
 import Styled from "./styled";
 import Button from "@/components/atoms/Button/Button.vue";
-import TextButton from "@/components/atoms/TextButton/TextButton.vue";
 import IconButton from "@/components/atoms/IconButton/IconButton.vue";
 import LogoSvg from "./LogoSvg";
 
@@ -40,7 +39,6 @@ export default {
   components: {
     Styled,
     LogoSvg,
-    TextButton,
     Button,
     IconButton,
   },

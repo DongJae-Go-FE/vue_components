@@ -5,7 +5,6 @@ import { getColor } from "@/assets/colors";
 const Styled = styled.ul`
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   list-style: none;
   li {
     position: relative;

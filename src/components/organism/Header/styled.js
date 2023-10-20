@@ -1,5 +1,5 @@
 import styled from "vue3-styled-components"; //{css}
-//import { typography } from "@/assets/typography";
+import { typography } from "@/assets/typography";
 import { getColor } from "@/assets/colors";
 
 const Styled = styled.header`
@@ -20,15 +20,34 @@ const Styled = styled.header`
       height: 100%;
     }
   }
+
   > div {
     display: flex;
     justify-content: space-between;
     width: calc(100% - 171px);
-    height: auto;
+    height: 100%;
+
     ul {
       display: flex;
       align-items: center;
       list-style: none;
+    }
+
+    > ul {
+      &:nth-child(1) {
+        > li {
+          height: 100%;
+          button {
+            height: 100%;
+            padding: 25px 32px;
+            background-color: transparent;
+            border: none;
+            ${typography.heading04B};
+            ${getColor("color", "gray400")};
+            cursor: pointer;
+          }
+        }
+      }
     }
 
     > div {
@@ -36,7 +55,7 @@ const Styled = styled.header`
       align-items: center;
       gap: 0 24px;
 
-      ul{
+      ul {
         gap: 0 8px;
       }
     }

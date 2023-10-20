@@ -1,20 +1,20 @@
 <template>
   <Styled
     ><ul>
-      <li><Button text="버튼" /></li>
-      <li><Button text="버튼" /></li>
-      <li><Button text="버튼" /></li>
-      <li><Button text="버튼" /></li>
+      <li><Button text="전체" size="large" color="green" /></li>
+      <li><Button text="정상" size="large" color="gray02" /></li>
+      <li><Button text="주의" size="large" color="gray02" /></li>
+      <li><Button text="장애" size="large" color="gray02" /></li>
     </ul>
     <ul>
-      <li><Dropdown :list="list" /></li>
-      <li><Dropdown :list="list" /></li>
-      <li><Dropdown :list="list" /></li>
-      <li><Dropdown :list="list" /></li>
+      <li><Dropdown :list="list" size="large"/></li>
+      <li><Dropdown :list="list" size="large"/></li>
+      <li><Dropdown :list="list" size="large"/></li>
+      <li><Dropdown :list="list" size="large"/></li>
     </ul>
     <div>
-      <SearchInput />
-      <Dropdown :list="list" />
+      <SearchInput placeholder="지역명을 검색하세요."/>
+      <Dropdown :list="list" size="large"/>
     </div>
   </Styled>
 </template>

@@ -8,8 +8,8 @@ const StyledButton = styled.button`
   justify-content: center;
   gap: 4px;
   border: 1px solid;
+  white-space: nowrap;
   cursor: pointer;
-
 
   ${({ size }) => {
     switch (size) {
@@ -85,6 +85,21 @@ const StyledButton = styled.button`
           }
         `;
       }
+
+      case "green": {
+        return css`
+          ${getColor("color", "white")};
+          ${getColor("background-color", "green500")};
+          ${getColor("border-color", "green500")};
+
+          &:disabled {
+            ${getColor("color", "gray200")};
+            ${getColor("border-color", "gray200")};
+            cursor: default;
+          }
+        `;
+      }
+
       case "primary":
       default: {
         return css`
@@ -117,6 +132,15 @@ const StyledButton = styled.button`
           return css`
             &:hover {
               ${getColor("background-color", "gray100")};
+            }
+          `;
+        }
+        case "green": {
+          return css`
+            &:hover {
+              ${getColor("color", "white")};
+              ${getColor("background-color", "green500")};
+              ${getColor("border-color", "green500")};
             }
           `;
         }
