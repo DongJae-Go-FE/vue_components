@@ -11,6 +11,8 @@
       </div>
     </div>
   </Content>
+  <RightArea />
+  <Toast/>
 </template>
 
 <script>
@@ -19,6 +21,8 @@ import Content from "./components/organism/Content/Content.vue";
 import LeftArea from "./components/organism/LeftArea/LeftArea.vue";
 import SortArea from "./components/organism/SortArea/SortArea.vue";
 import ListItem from "./components/molecule/ListItem/ListItem.vue";
+import RightArea from "./components/organism/RightArea/RightArea.vue";
+import Toast from "./components/molecule/Toast/Toast.vue"
 import { dummy } from "../src/data/dummy";
 
 import "../src/assets/global.css";
@@ -31,6 +35,8 @@ export default {
     LeftArea,
     SortArea,
     ListItem,
+    RightArea,
+    Toast,
   },
   mounted() {},
   data() {

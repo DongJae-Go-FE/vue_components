@@ -8,6 +8,7 @@ const StyledTag = styled.button`
   padding: 0 8px;
   background: none;
   border: none;
+  white-space: nowrap;
   cursor: pointer;
 
   &:hover {
