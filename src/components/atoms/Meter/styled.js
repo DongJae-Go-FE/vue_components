@@ -31,23 +31,18 @@ const Styled = styled.li`
       &:nth-child(2) {
         p {
           ${({ value }) => {
-            switch (value) {
-              case 79 < value: {
-                return css`
-                  ${getColor("color", "red500")};
-                `;
-              }
-              case 40 < value: {
-                return css`
-                  ${getColor("color", "orange500")};
-                `;
-              }
-              case value < 40:
-              default: {
-                return css`
-                  ${getColor("color", "green500")};
-                `;
-              }
+            if (79 < Number(value)) {
+              return css`
+                ${getColor("color", "red500")};
+              `;
+            } else if (40 < Number(value)) {
+              return css`
+                ${getColor("color", "orange500")};
+              `;
+            } else {
+              return css`
+                ${getColor("color", "green500")};
+              `;
             }
           }}
         }

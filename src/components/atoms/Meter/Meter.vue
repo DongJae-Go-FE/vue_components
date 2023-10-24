@@ -27,7 +27,7 @@
       min="0"
       max="100"
       :low="low"
-      :high="hugh"
+      :high="high"
       :optimum="optimum"
       :value="value"
     />
