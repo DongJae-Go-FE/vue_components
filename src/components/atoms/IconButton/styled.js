@@ -1,6 +1,6 @@
-import styled from "vue3-styled-components"; //{css}
+import styled, { css } from "vue3-styled-components"; //
 //import { typography } from "@/assets/typography";
-//import { getColor } from "@/assets/colors";
+import { getColor } from "@/assets/colors";
 
 const IconButtonStyled = styled.button`
   display: inline-flex;
@@ -9,7 +9,7 @@ const IconButtonStyled = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
-  
+
   span {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -18,6 +18,30 @@ const IconButtonStyled = styled.button`
     margin: -1px;
     overflow: hidden;
   }
+
+  ${({ color }) => {
+    switch (color) {
+      case "white": {
+        return css`
+          svg {
+            path {
+              ${getColor("fill", "white")};
+            }
+          }
+        `;
+      }
+      case "black":
+      default: {
+        return css`
+          svg {
+            path {
+              ${getColor("fill", "black")};
+            }
+          }
+        `;
+      }
+    }
+  }}
 `;
 
 export default IconButtonStyled;

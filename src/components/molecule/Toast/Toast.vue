@@ -1,20 +1,20 @@
 <template>
-  <Styled> 
+  <Styled :state="state">
     <div>
-      <h4>타이틀</h4>
-      <button type="button">닫기</button>
+      <h4>{{ title }}</h4>
+      <IconButton icon="close" color="white" />
     </div>
+    <div>CPU, 부하량 서버가 ‘{{ state }}’ 상태입니다.</div>
     <div>
-      콘텐츠
-    </div>
-    <div>
-      닫기
+      <Button type="button" size="small" text="상세보기"/>
     </div>
   </Styled>
 </template>
 
 <script>
 import Styled from "./styled";
+import IconButton from "@/components/atoms/IconButton/IconButton.vue";
+import Button from "@/components/atoms/Button/Button.vue";
 export default {
   name: "ToastComponent",
   mounted() {
@@ -30,9 +30,15 @@ export default {
   },
   components: {
     Styled,
+    IconButton,
+    Button,
   },
   methods: {},
-  props: {},
+  props: {
+    title: String,
+    content: String,
+    state: String,
+  },
   data() {
     return {};
   },

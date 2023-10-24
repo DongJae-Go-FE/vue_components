@@ -1,5 +1,5 @@
 <template>
-  <Styled type="button">
+  <Styled type="button" :color="color">
     <CloseSvg v-if="icon === 'close'" />
     <PeoplesSvg v-else-if="icon === 'peoples'" />
     <RssSvg v-else-if="icon === 'rss'" />
@@ -36,6 +36,7 @@ export default {
   props: {
     icon: String,
     iconText: String,
+    color: String,
   },
   data() {
     return {};
