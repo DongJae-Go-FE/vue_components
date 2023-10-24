@@ -14,6 +14,7 @@
   <RightArea />
   <Toast title="테스트" content="콘텐츠" state="장애"/>
   <Toast title="테스트" content="콘텐츠" state="주의"/>
+  <MeterArea/>
 </template>
 
 <script>
@@ -24,6 +25,7 @@ import SortArea from "./components/organism/SortArea/SortArea.vue";
 import ListItem from "./components/molecule/ListItem/ListItem.vue";
 import RightArea from "./components/organism/RightArea/RightArea.vue";
 import Toast from "./components/molecule/Toast/Toast.vue"
+import MeterArea from "./components/molecule/MeterArea/MeterArea.vue"
 import { dummy } from "../src/data/dummy";
 
 import "../src/assets/global.css";
@@ -38,6 +40,7 @@ export default {
     ListItem,
     RightArea,
     Toast,
+    MeterArea,
   },
   mounted() {},
   data() {
