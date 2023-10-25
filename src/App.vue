@@ -12,9 +12,10 @@
     </div>
   </Content>
   <RightArea />
-  <Toast title="테스트" content="콘텐츠" state="장애"/>
-  <Toast title="테스트" content="콘텐츠" state="주의"/>
-  <MeterArea/>
+  <Toast title="테스트" content="콘텐츠" state="장애" />
+  <Toast title="테스트" content="콘텐츠" state="주의" />
+  <MeterArea />
+  <MultiSlider />
 </template>
 
 <script>
@@ -24,8 +25,9 @@ import LeftArea from "./components/organism/LeftArea/LeftArea.vue";
 import SortArea from "./components/organism/SortArea/SortArea.vue";
 import ListItem from "./components/molecule/ListItem/ListItem.vue";
 import RightArea from "./components/organism/RightArea/RightArea.vue";
-import Toast from "./components/molecule/Toast/Toast.vue"
-import MeterArea from "./components/molecule/MeterArea/MeterArea.vue"
+import Toast from "./components/molecule/Toast/Toast.vue";
+import MeterArea from "./components/molecule/MeterArea/MeterArea.vue";
+import MultiSlider from "./components/atoms/MultiSlider/MultiSlider.vue";
 import { dummy } from "../src/data/dummy";
 
 import "../src/assets/global.css";
@@ -41,6 +43,7 @@ export default {
     RightArea,
     Toast,
     MeterArea,
+    MultiSlider,
   },
   mounted() {},
   data() {

@@ -25,7 +25,7 @@ const Styled = styled.div`
         top: 50%;
         right: -17px;
         transform: translateY(-50%);
-        ${getColor("background-color", "gray100")};
+        ${getColor("background-color", "gray200")};
       }
     }
   }
