@@ -1,9 +1,37 @@
 <template>
   <Styled>
-    <Meter lable="네트워크" low="40" high="80" optimum="81" value="30" unit="ms"/>
-    <Meter lable="메모리" low="40" high="80" optimum="81" value="34" unit="%"/>
-    <Meter lable="cpu" low="40" high="80" optimum="81" value="79" unit="%"/>
-    <Meter lable="부하량" low="40" high="80" optimum="81" value="96" unit="%"/>
+    <Meter
+      lable="네트워크"
+      :low="40"
+      :high="80"
+      :optimum="81"
+      :value="30"
+      unit="ms"
+    />
+    <Meter
+      lable="메모리"
+      :low="40"
+      :high="80"
+      :optimum="81"
+      :value="34"
+      unit="%"
+    />
+    <Meter
+      lable="cpu"
+      :low="40"
+      :high="80"
+      :optimum="81"
+      :value="79"
+      unit="%"
+    />
+    <Meter
+      lable="부하량"
+      :low="40"
+      :high="80"
+      :optimum="81"
+      :value="96"
+      unit="%"
+    />
   </Styled>
 </template>
 

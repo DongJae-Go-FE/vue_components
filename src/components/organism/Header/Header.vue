@@ -8,8 +8,8 @@
       </ul>
       <div>
         <ul>
-          <li><Button text="Data" size="small" color="gray01" /></li>
-          <li><Button text="Maps" size="small" color="gray02" /></li>
+          <li><Button type="button" text="Data" size="small" color="gray01" /></li>
+          <li><Button type="button" text="Maps" size="small" color="gray02" /></li>
         </ul>
         <IconButton icon="peoples" iconText="내정보 아이콘" />
       </div>

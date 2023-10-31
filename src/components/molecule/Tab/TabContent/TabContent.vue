@@ -1,13 +1,11 @@
 <template>
-  <Styled>
-    <li v-for="(data, i) in listData" :key="i">{{ data }}</li>
-  </Styled>
+  <Styled v-if="tabOn === sub">{{ content }}</Styled>
 </template>
 
 <script>
 import Styled from "./styled";
 export default {
-  name: "ListTextComponent",
+  name: "TabContentComponent",
   mounted() {
     //라이프 사이클
     //beforeCreate();
@@ -23,9 +21,7 @@ export default {
     Styled,
   },
   methods: {},
-  props: {
-    listData: Array,
-  },
+  props: { content: String, tabOn: Number, sub: Number },
   data() {
     return {};
   },

@@ -15,6 +15,7 @@
   <Toast title="테스트" content="콘텐츠" state="주의" />
   <MeterArea />
   <MultiSlider />
+  <Tab :data="tabData" />
 </template>
 
 <script>
@@ -27,6 +28,7 @@ import RightArea from "./components/organism/RightArea/RightArea.vue";
 import Toast from "./components/molecule/Toast/Toast.vue";
 import MeterArea from "./components/molecule/MeterArea/MeterArea.vue";
 import MultiSlider from "./components/atoms/MultiSlider/MultiSlider.vue";
+import Tab from "./components/molecule/Tab/Tab.vue";
 import { dummy } from "../src/data/dummy";
 
 import "../src/assets/global.css";
@@ -43,6 +45,7 @@ export default {
     Toast,
     MeterArea,
     MultiSlider,
+    Tab,
   },
   mounted() {},
   data() {
@@ -50,6 +53,23 @@ export default {
       list: [{ title: "목록1" }, { title: "목록2" }, { title: "목록3" }],
       list2: ["대외", "서울시 송파구", "2023년 9월 입주 (900세대)"],
       dummy: dummy,
+      tabData: [
+        {
+          key: "1",
+          label: "Tab 1",
+          children: "Content of Tab Pane 1",
+        },
+        {
+          key: "2",
+          label: "Tab 2",
+          children: "Content of Tab Pane 2",
+        },
+        {
+          key: "3",
+          label: "Tab 3",
+          children: "Content of Tab Pane 3",
+        },
+      ],
     };
   },
 };

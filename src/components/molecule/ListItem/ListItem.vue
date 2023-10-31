@@ -1,6 +1,6 @@
 <template>
   <Styled>
-    <div><Tag :state="data.state" /> <IconButtom icon="rss" /></div>
+    <div><Tag :state="data.state" /> <IconButtom icon="rss" color="black" /></div>
     <p>{{ data.title }}</p>
     <ListText :listData="data.list" />
     <ul>
@@ -49,7 +49,7 @@ export default {
   },
   methods: {},
   props: {
-    data: Array,
+    data: Object,
   },
   data() {
     return {};
