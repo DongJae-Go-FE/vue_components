@@ -4,12 +4,11 @@ import { getColor } from "@/assets/colors";
 
 const Styled = styled.div`
   width: 296px;
+  margin: 20px 0;
   position: relative;
-  //임시
-  top: 20px;
 
   > div {
-    height: 45px;
+    height: 8px;
     position: relative;
     z-index: 1;
 

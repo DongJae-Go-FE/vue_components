@@ -11,6 +11,10 @@ const Styled = styled.div`
     border-right: 1px solid;
     ${getColor("border-right-color", "gray200")};
   }
+
+  > div {
+    width: calc(100% - 224px);
+  }
 `;
 
 export default Styled;
