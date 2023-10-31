@@ -1,12 +1,14 @@
 <template>
   <Styled>
-    <input type="range" min="0" max="100" value="25" />
-    <input type="range" min="0" max="100" value="75" />
-    <div class="slider">
-      <div class="track"></div>
-      <div class="range"></div>
-      <div class="thumb left"></div>
-      <div class="thumb right"></div>
+    <input type="range" min="0" max="100" value="25" ref="inputLeft" />
+    <input type="range" min="0" max="100" value="75" ref="inputRight" />
+    <div>
+      <div></div>
+      <div ref="range"></div>
+      <div ref="thumbLeft"></div>
+      <div ref="thumbRight"></div>
+      <div ref="rangeLeft"></div>
+      <div ref="rangeRight"></div>
     </div>
   </Styled>
 </template>
@@ -16,23 +18,58 @@ import Styled from "./styled";
 export default {
   name: "MultiSliderComponent",
   mounted() {
-    //라이프 사이클
-    //beforeCreate();
-    //created();
-    //beforeMount();
-    //mounted();
-    //beforeUpdate();
-    //updated();
-    //beforeUnmount();
-    //unmounted();
+    this.inputLeft = this.$refs.inputLeft;
+    this.inputRight = this.$refs.inputRight;
+    this.thumbLeft = this.$refs.thumbLeft;
+    this.thumbRight = this.$refs.thumbRight;
+    this.range = this.$refs.range;
+    this.rangeLeft = this.$refs.rangeLeft;
+    this.rangeRight = this.$refs.rangeRight;
+    this.inputLeft.addEventListener("input", this.setLeftValue);
+    this.inputRight.addEventListener("input", this.setRightValue);
   },
   components: {
     Styled,
   },
-  methods: {},
+  methods: {
+    setLeftValue() {
+      const [min, max] = [
+        parseInt(this.inputLeft.min),
+        parseInt(this.inputLeft.max),
+      ];
+      this.inputLeft.value = Math.min(
+        parseInt(this.inputLeft.value),
+        parseInt(this.inputRight.value) - 2
+      );
+      const percent = ((this.inputLeft.value - min) / (max - min)) * 100;
+      this.thumbLeft.style.left = percent + "%";
+      this.range.style.left = percent + "%";
+      this.rangeLeft.style.width = percent + "%";
+    },
+    setRightValue() {
+      const [min, max] = [
+        parseInt(this.inputRight.min),
+        parseInt(this.inputRight.max),
+      ];
+      this.inputRight.value = Math.max(
+        parseInt(this.inputRight.value),
+        parseInt(this.inputLeft.value) + 2
+      );
+      const percent = ((this.inputRight.value - min) / (max - min)) * 100;
+      this.thumbRight.style.right = 100 - percent + "%";
+      this.range.style.right = 100 - percent + "%";
+      this.rangeRight.style.width = 100 - percent + "%";
+    },
+  },
   props: {},
   data() {
-    return {};
+    return {
+      inputLeft: "",
+      inputRight: "",
+      thumbLeft: "",
+      thumbRight: "",
+      range: "",
+    };
   },
 };
 </script>

@@ -12,7 +12,6 @@
     </div>
   </Content>
   <RightArea />
-  <Toast title="테스트" content="콘텐츠" state="장애" />
   <Toast title="테스트" content="콘텐츠" state="주의" />
   <MeterArea />
   <MultiSlider />
