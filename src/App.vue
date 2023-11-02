@@ -16,6 +16,7 @@
   <MeterArea />
   <MultiSlider />
   <Tab :data="tabData" />
+  <HalfCircleMeter :value="50" />
 </template>
 
 <script>
@@ -29,6 +30,7 @@ import Toast from "./components/molecule/Toast/Toast.vue";
 import MeterArea from "./components/molecule/MeterArea/MeterArea.vue";
 import MultiSlider from "./components/atoms/MultiSlider/MultiSlider.vue";
 import Tab from "./components/molecule/Tab/Tab.vue";
+import HalfCircleMeter from "./components/atoms/HalfCircleMeter/HalfCircleMeter.vue";
 import { dummy } from "../src/data/dummy";
 
 import "../src/assets/global.css";
@@ -46,6 +48,7 @@ export default {
     MeterArea,
     MultiSlider,
     Tab,
+    HalfCircleMeter,
   },
   mounted() {},
   data() {

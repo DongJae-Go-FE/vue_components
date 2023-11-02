@@ -11,7 +11,7 @@ import { dummy } from "@/data/dummy";
 import ListItemTwoVue from "@/components/molecule/ListItemTwo/ListItemTwo.vue";
 import Styled from "./styled";
 export default {
-  name: "RightArea Component",
+  name: "RightAreaComponent",
   mounted() {
     //라이프 사이클
     //beforeCreate();
