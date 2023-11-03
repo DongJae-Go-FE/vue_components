@@ -1,12 +1,30 @@
 <template>
   <Styled>
-    <input type="range" min="0" max="100" value="25" ref="inputLeft" />
-    <input type="range" min="0" max="100" value="75" ref="inputRight" />
+    <input
+      type="range"
+      min="0"
+      max="100"
+      value="25"
+      ref="inputLeft"
+      id="leftRange"
+    />
+    <input
+      type="range"
+      min="0"
+      max="100"
+      value="75"
+      ref="inputRight"
+      id="RightRange"
+    />
     <div>
       <div></div>
       <div ref="range"></div>
-      <div ref="thumbLeft"></div>
-      <div ref="thumbRight"></div>
+      <div ref="thumbLeft">
+        <label for="leftRange">슬라이더 최소 수치 조절 레인지</label>
+      </div>
+      <div ref="thumbRight">
+        <label for="RightRange">슬라이더 최대 수치 조절 레인지</label>
+      </div>
       <div ref="rangeLeft"></div>
       <div ref="rangeRight"></div>
     </div>

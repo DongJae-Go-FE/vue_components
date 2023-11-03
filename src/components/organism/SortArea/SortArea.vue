@@ -13,7 +13,7 @@
       <li><Dropdown :list="list" size="large"/></li>
     </ul>
     <div>
-      <SearchInput placeholder="지역명을 검색하세요."/>
+      <SearchInput id="search" label="지역명 검색" placeholder="지역명을 검색하세요."/>
       <Dropdown :list="list" size="large"/>
     </div>
   </Styled>

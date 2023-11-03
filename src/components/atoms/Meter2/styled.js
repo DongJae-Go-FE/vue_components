@@ -49,7 +49,7 @@ const Styled = styled.div`
 
         &::-webkit-meter-bar {
           border: none;
-          border-radius: 100px;
+          border-radius: 44px;
           ${({ value }) => {
             if (79 < Number(value)) {
               return css`
@@ -95,7 +95,8 @@ const Styled = styled.div`
         }
       }
 
-      > div {
+      > label {
+        display: block;
         width: 8px;
         height: 8px;
         position: absolute;
@@ -105,6 +106,15 @@ const Styled = styled.div`
         ${getColor("background-color", "white")}
         border-radius: 8px;
         border: 2px solid #333;
+
+        span {
+          position: absolute;
+          clip: rect(0 0 0 0);
+          width: 1px;
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+        }
       }
     }
   }

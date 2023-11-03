@@ -79,6 +79,15 @@ const Styled = styled.li`
     border-bottom: 1px solid;
     ${getColor("border-bottom-color", "gray200")};
   }
+
+  label {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+  }
 `;
 
 export default Styled;

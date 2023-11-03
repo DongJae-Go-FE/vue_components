@@ -1,12 +1,12 @@
 <template>
-  <Styled :state="state">
+  <Styled :state="state" role="alert">
     <div>
       <h4>{{ title }}</h4>
       <IconButton icon="close" color="white" />
     </div>
     <div>CPU, 부하량 서버가 ‘{{ state }}’ 상태입니다.</div>
     <div>
-      <Button type="button" size="small" text="상세보기"/>
+      <Button type="button" size="small" text="상세보기" />
     </div>
   </Styled>
 </template>

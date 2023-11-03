@@ -1,6 +1,13 @@
 <template>
   <Styled :tabOn="tabOn" :headerKey="headerKey">
-    <button type="button" @click="$emit('tabOnChange', headerKey)">
+    <button
+      type="button"
+      role="tab"
+      @click="$emit('tabOnChange', headerKey)"
+      :id="'tabCom' + headerKey"
+      :aria-controls="'tab' + headerKey"
+      :aria-selected="tabOn === headerKey ? true : false"
+    >
       {{ title }}
     </button>
   </Styled>

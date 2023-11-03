@@ -1,5 +1,11 @@
 <template>
-  <Styled v-if="tabOn === sub">{{ content }}</Styled>
+  <Styled
+    v-if="tabOn === sub"
+    role="tabpanel"
+    tabindex="0"
+    :aria-labelledby="'tabCom' + tabOn"
+    >{{ content }}</Styled
+  >
 </template>
 
 <script>

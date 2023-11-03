@@ -23,9 +23,11 @@
         </p>
       </div>
     </div>
+    <label :for="label">{{ lable }}</label>
     <meter
       min="0"
       max="100"
+      :id="label"
       :low="low"
       :high="high"
       :optimum="optimum"

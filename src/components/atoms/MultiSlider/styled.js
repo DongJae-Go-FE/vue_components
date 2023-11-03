@@ -55,6 +55,15 @@ const Styled = styled.div`
         box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
         border-radius: 100px;
         transform: translateY(-5px);
+
+        label {
+          position: absolute;
+          clip: rect(0 0 0 0);
+          width: 1px;
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+        }
       }
 
       &:nth-child(3) {
