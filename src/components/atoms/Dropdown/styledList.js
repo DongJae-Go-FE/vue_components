@@ -23,6 +23,7 @@ const StyledDropDownList = styled.ul`
       width: 100%;
       height: 100%;
       border: none;
+      text-align: left;
       cursor: pointer;
 
       ${getColor("color", "gray400")}
@@ -61,6 +62,7 @@ const StyledDropDownList = styled.ul`
         `;
       case "large":
         return css`
+          width: 128px;
           border-radius: 6px;
           li {
             button {

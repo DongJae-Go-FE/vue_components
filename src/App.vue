@@ -16,7 +16,8 @@
   <MeterArea />
   <MultiSlider />
   <Tab :data="tabData" />
-  <HalfCircleMeter :value="90" />
+  <HalfCircleMeter :value="59" />
+  <Meter2 :value="34" />
 </template>
 
 <script>
@@ -31,6 +32,7 @@ import MeterArea from "./components/molecule/MeterArea/MeterArea.vue";
 import MultiSlider from "./components/atoms/MultiSlider/MultiSlider.vue";
 import Tab from "./components/molecule/Tab/Tab.vue";
 import HalfCircleMeter from "./components/atoms/HalfCircleMeter/HalfCircleMeter.vue";
+import Meter2 from "./components/atoms/Meter2/Meter2.vue";
 import { dummy } from "../src/data/dummy";
 
 import "../src/assets/global.css";
@@ -49,6 +51,7 @@ export default {
     MultiSlider,
     Tab,
     HalfCircleMeter,
+    Meter2,
   },
   mounted() {},
   data() {

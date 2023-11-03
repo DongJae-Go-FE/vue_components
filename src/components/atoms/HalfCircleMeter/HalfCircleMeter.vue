@@ -22,14 +22,14 @@ export default {
   mounted() {
     this.pathValue = this.$refs.path;
     for (let i = 0; i < this.setValue; i++) {
-      this.pathValue[i].style.stroke = this.colorReturn();
+      this.pathValue[i].style.stroke = this.ColorReturn();
     }
   },
   components: {
     Styled,
   },
   methods: {
-    colorReturn() {
+    ColorReturn() {
       if (79 < this.value) {
         return "#FF3B30";
       } else if (40 < this.value) {
