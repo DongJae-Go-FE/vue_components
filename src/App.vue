@@ -16,7 +16,7 @@
   <MeterArea />
   <MultiSlider />
   <Tab :data="tabData" />
-  <HalfCircleMeter :value="50" />
+  <HalfCircleMeter :value="90" />
 </template>
 
 <script>

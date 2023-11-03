@@ -1,21 +1,16 @@
 <template>
-  <Styled :setValue="setValue">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="139"
-      height="67"
-      viewBox="0 0 139 67"
-      fill="none"
-    >
+  <Styled :value="value">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none">
       <path
         v-for="(data, i) in pathData"
         :d="data.title"
         :opacity="data.opacity"
         :key="i"
         :strokeMiterlimit="10"
+        ref="path"
       />
     </svg>
-    <div>{{ value }} %</div>
+    <div>{{ value }} <span>%</span></div>
   </Styled>
 </template>
 
@@ -25,25 +20,31 @@ import { dummy } from "./data/dummy";
 export default {
   name: "HalfCircleMeterComponent",
   mounted() {
-    //라이프 사이클
-    //beforeCreate();
-    //created();
-    //beforeMount();
-    //mounted();
-    //beforeUpdate();
-    //updated();
-    //beforeUnmount();
-    //unmounted();
+    this.pathValue = this.$refs.path;
+    for (let i = 0; i < this.setValue; i++) {
+      this.pathValue[i].style.stroke = this.colorReturn();
+    }
   },
   components: {
     Styled,
   },
-  methods: {},
+  methods: {
+    colorReturn() {
+      if (79 < this.value) {
+        return "#FF3B30";
+      } else if (40 < this.value) {
+        return "#FF9500";
+      } else {
+        return "#34C759";
+      }
+    },
+  },
   props: {
     value: Number,
   },
   data() {
     return {
+      pathValue: "",
       setValue: Math.floor(this.value / 1.66),
       pathData: dummy,
     };
