@@ -8,7 +8,7 @@
     <colgroup>
       <col
         v-for="(headerData, i) in header"
-        :style="headerData.width"
+        :width="headerData.width"
         :key="i"
       />
     </colgroup>
@@ -21,7 +21,11 @@
     </thead>
     <tbody>
       <tr v-for="(Data, i) in TableData" :key="i">
-        <td v-for="SubData in headerKey()" :key="SubData + i">
+        <td
+          v-for="(SubData, subKey) in headerKey()"
+          :key="SubData + i"
+          :style="header[subKey].style"
+        >
           {{ Data[SubData] }}
         </td>
       </tr>

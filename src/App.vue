@@ -121,10 +121,34 @@ export default {
         ],
       ],
       header: [
-        { key: 0, title: "지역", value: "region", width: "25%" },
-        { key: 1, title: "정상", value: "normal", width: "25%" },
-        { key: 2, title: "주의", value: "caution", width: "25%" },
-        { key: 3, title: "장애", value: "obstacle", width: "25%" },
+        {
+          key: 0,
+          title: "지역",
+          value: "region",
+          width: "25%",
+          style: { color: "#999999" },
+        },
+        {
+          key: 1,
+          title: "정상",
+          value: "normal",
+          width: "25%",
+          style: { fontWeight: 700, color: "#34C759" },
+        },
+        {
+          key: 2,
+          title: "주의",
+          value: "caution",
+          width: "25%",
+          style: { fontWeight: 700, color: "#FF9500" },
+        },
+        {
+          key: 3,
+          title: "장애",
+          value: "obstacle",
+          width: "25%",
+          style: { fontWeight: 700, color: "#FF3b30" },
+        },
       ],
       tabData2: [
         {
