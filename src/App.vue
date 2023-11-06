@@ -82,23 +82,41 @@ export default {
       tableData: [
         [
           {
-            key: "foo",
+            key: 1,
             title: "타이틀1",
             content: "테스트1",
           },
         ],
         [
           {
-            key: "bar",
+            key: 2,
             title: "타이틀2",
             content: "테스트2",
           },
           {
-            key: "baz",
+            key: 3,
             title: "타이틀3",
             content: "테스트3",
           },
         ],
+        [
+          {
+            key: 4,
+            title: "타이틀4",
+            content: "테스트4",
+          },
+          {
+            key: 5,
+            title: "타이틀5",
+            content: "테스트5",
+          },
+          {
+            key: 6,
+            title: "타이틀6",
+            content: "테스트6",
+          },
+        ],
+        
       ],
     };
   },

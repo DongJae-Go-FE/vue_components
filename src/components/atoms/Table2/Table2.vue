@@ -1,16 +1,15 @@
 <template>
   <Styled>
-    <caption>
-      {{
-        caption
-      }}
-    </caption>
-    <tbody>
-      <tr v-for="(data, i) in tableData" :key="i">
-        <th>{{ data[0].title }}</th>
-        <td>{{ data[0].content }}</td>
-      </tr>
-    </tbody>
+    <ul>
+      <li v-for="(data, i) in tableData" :key="i">
+        <div v-for="(sub, subKey) in data" :key="subKey">
+          <div>
+            {{ data[subKey].title }}
+          </div>
+          <div>{{ data[subKey].content }}</div>
+        </div>
+      </li>
+    </ul>
   </Styled>
 </template>
 
