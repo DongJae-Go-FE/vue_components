@@ -18,7 +18,8 @@
   <Tab :data="tabData" />
   <HalfCircleMeter :value="90" />
   <Meter2 :value="90" />
-  <Table2 caption="테이블설명" :tableData="tableData" />
+  <Table2 :tableData="tableData" />
+  <Table3 caption="테이블 설명" :header="header" :TableData="tabData2" />
 </template>
 
 <script>
@@ -35,6 +36,7 @@ import Tab from "./components/molecule/Tab/Tab.vue";
 import HalfCircleMeter from "./components/atoms/HalfCircleMeter/HalfCircleMeter.vue";
 import Meter2 from "./components/atoms/Meter2/Meter2.vue";
 import Table2 from "./components/atoms/Table2/Table2.vue";
+import Table3 from "./components/atoms/Table3/Table3.vue";
 import { dummy } from "../src/data/dummy";
 
 import "../src/assets/global.css";
@@ -55,6 +57,7 @@ export default {
     HalfCircleMeter,
     Meter2,
     Table2,
+    Table3,
   },
   mounted() {},
   data() {
@@ -116,7 +119,44 @@ export default {
             content: "테스트6",
           },
         ],
-        
+      ],
+      header: [
+        { key: 0, title: "지역", value: "region", width: "25%" },
+        { key: 1, title: "정상", value: "normal", width: "25%" },
+        { key: 2, title: "주의", value: "caution", width: "25%" },
+        { key: 3, title: "장애", value: "obstacle", width: "25%" },
+      ],
+      tabData2: [
+        {
+          region: "서울(29)",
+          normal: 28,
+          caution: 0,
+          obstacle: 1,
+        },
+        {
+          region: "경기(32)",
+          normal: 31,
+          caution: 1,
+          obstacle: 0,
+        },
+        {
+          region: "인천(13)",
+          normal: 12,
+          caution: 0,
+          obstacle: 1,
+        },
+        {
+          region: "부산(7)",
+          normal: 7,
+          caution: 0,
+          obstacle: 0,
+        },
+        {
+          region: "대구(8)",
+          normal: 8,
+          caution: 8,
+          obstacle: 8,
+        },
       ],
     };
   },
