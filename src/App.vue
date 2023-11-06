@@ -16,8 +16,9 @@
   <MeterArea />
   <MultiSlider />
   <Tab :data="tabData" />
-  <HalfCircleMeter :value="38" />
-  <Meter2 :value="34" />
+  <HalfCircleMeter :value="90" />
+  <Meter2 :value="90" />
+  <Table2 caption="테이블설명" :tableData="tableData" />
 </template>
 
 <script>
@@ -33,6 +34,7 @@ import MultiSlider from "./components/atoms/MultiSlider/MultiSlider.vue";
 import Tab from "./components/molecule/Tab/Tab.vue";
 import HalfCircleMeter from "./components/atoms/HalfCircleMeter/HalfCircleMeter.vue";
 import Meter2 from "./components/atoms/Meter2/Meter2.vue";
+import Table2 from "./components/atoms/Table2/Table2.vue";
 import { dummy } from "../src/data/dummy";
 
 import "../src/assets/global.css";
@@ -52,6 +54,7 @@ export default {
     Tab,
     HalfCircleMeter,
     Meter2,
+    Table2,
   },
   mounted() {},
   data() {
@@ -75,6 +78,27 @@ export default {
           label: "Tab 3",
           children: "Content of Tab Pane 3",
         },
+      ],
+      tableData: [
+        [
+          {
+            key: "foo",
+            title: "타이틀1",
+            content: "테스트1",
+          },
+        ],
+        [
+          {
+            key: "bar",
+            title: "타이틀2",
+            content: "테스트2",
+          },
+          {
+            key: "baz",
+            title: "타이틀3",
+            content: "테스트3",
+          },
+        ],
       ],
     };
   },
