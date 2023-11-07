@@ -1,4 +1,4 @@
-import styled, { css } from "vue3-styled-components"; //{css}
+import styled, { css } from "vue3-styled-components";
 import { typography } from "@/assets/typography";
 import { getColor } from "@/assets/colors";
 

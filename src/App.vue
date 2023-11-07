@@ -20,6 +20,7 @@
   <Meter2 :value="90" />
   <Table2 :tableData="tableData" />
   <Table3 caption="테이블 설명" :header="header" :TableData="tabData2" />
+  <PageTitle title="타이틀" :list="list3" />
 </template>
 
 <script>
@@ -37,6 +38,7 @@ import HalfCircleMeter from "./components/atoms/HalfCircleMeter/HalfCircleMeter.
 import Meter2 from "./components/atoms/Meter2/Meter2.vue";
 import Table2 from "./components/atoms/Table2/Table2.vue";
 import Table3 from "./components/atoms/Table3/Table3.vue";
+import PageTitle from "./components/molecule/PageTitle/PageTitle.vue";
 import { dummy } from "../src/data/dummy";
 
 import "../src/assets/global.css";
@@ -58,6 +60,7 @@ export default {
     Meter2,
     Table2,
     Table3,
+    PageTitle,
   },
   mounted() {},
   data() {
@@ -181,6 +184,11 @@ export default {
           caution: 8,
           obstacle: 8,
         },
+      ],
+      list3: [
+        { title: "HOME", path: "/path1" },
+        { title: "1차 메뉴", path: "/path1/path2" },
+        { title: "2차 메뉴", path: "path1/path2/path3" },
       ],
     };
   },
