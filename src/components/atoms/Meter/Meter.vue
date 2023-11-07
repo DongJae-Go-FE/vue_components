@@ -1,19 +1,19 @@
 <template>
   <Styled :value="value">
     <div>
-      <div v-if="lable === '네트워크'">
+      <div v-if="label === '네트워크'">
         <LinkCloudSvg />
         <p>네트워크<span>(ping)</span></p>
       </div>
-      <div v-else-if="lable === '메모리'">
+      <div v-else-if="label === '메모리'">
         <MemoryOneSvg />
         <p>메모리</p>
       </div>
-      <div v-else-if="lable === 'cpu'">
+      <div v-else-if="label === 'cpu'">
         <CpuSvg />
         <p>CPU</p>
       </div>
-      <div v-else-if="lable === '부하량'">
+      <div v-else-if="label === '부하량'">
         <ChipSvg />
         <p>부하량</p>
       </div>
@@ -23,7 +23,7 @@
         </p>
       </div>
     </div>
-    <label :for="label">{{ lable }}</label>
+    <label :for="label">{{ label }}</label>
     <meter
       min="0"
       max="100"
@@ -64,7 +64,7 @@ export default {
   },
   methods: {},
   props: {
-    lable: String,
+    label: String,
     value: Number,
     low: Number,
     high: Number,

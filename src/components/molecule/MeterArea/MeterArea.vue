@@ -1,7 +1,7 @@
 <template>
   <Styled>
     <Meter
-      lable="네트워크"
+      label="네트워크"
       :low="40"
       :high="80"
       :optimum="81"
@@ -9,7 +9,7 @@
       unit="ms"
     />
     <Meter
-      lable="메모리"
+      label="메모리"
       :low="40"
       :high="80"
       :optimum="81"
@@ -17,7 +17,7 @@
       unit="%"
     />
     <Meter
-      lable="cpu"
+      label="cpu"
       :low="40"
       :high="80"
       :optimum="81"
@@ -25,7 +25,7 @@
       unit="%"
     />
     <Meter
-      lable="부하량"
+      label="부하량"
       :low="40"
       :high="80"
       :optimum="81"

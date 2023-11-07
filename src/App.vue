@@ -23,7 +23,7 @@
     caption="테이블 설명"
     :header="header"
     :TableData="tabData2"
-    type="type2"
+    type="type1"
   />
   <PageTitle title="타이틀" :list="list3" />
 </template>
