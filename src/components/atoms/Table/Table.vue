@@ -1,5 +1,5 @@
 <template>
-  <Styled>
+  <Styled :type="type">
     <caption>
       {{
         caption
@@ -36,7 +36,7 @@
 <script>
 import Styled from "./styled";
 export default {
-  name: "Table3Component",
+  name: "TableComponent",
   mounted() {
     //라이프 사이클
     //beforeCreate();
@@ -60,6 +60,7 @@ export default {
     caption: String,
     header: Array,
     TableData: Array,
+    type: String,
   },
   data() {
     return {};

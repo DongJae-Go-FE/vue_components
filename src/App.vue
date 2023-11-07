@@ -19,7 +19,12 @@
   <HalfCircleMeter :value="90" />
   <Meter2 :value="90" />
   <Table2 :tableData="tableData" />
-  <Table3 caption="테이블 설명" :header="header" :TableData="tabData2" />
+  <Table
+    caption="테이블 설명"
+    :header="header"
+    :TableData="tabData2"
+    type="type2"
+  />
   <PageTitle title="타이틀" :list="list3" />
 </template>
 
@@ -37,7 +42,7 @@ import Tab from "./components/molecule/Tab/Tab.vue";
 import HalfCircleMeter from "./components/atoms/HalfCircleMeter/HalfCircleMeter.vue";
 import Meter2 from "./components/atoms/Meter2/Meter2.vue";
 import Table2 from "./components/atoms/Table2/Table2.vue";
-import Table3 from "./components/atoms/Table3/Table3.vue";
+import Table from "./components/atoms/Table/Table.vue";
 import PageTitle from "./components/molecule/PageTitle/PageTitle.vue";
 import { dummy } from "../src/data/dummy";
 
@@ -59,7 +64,7 @@ export default {
     HalfCircleMeter,
     Meter2,
     Table2,
-    Table3,
+    Table,
     PageTitle,
   },
   mounted() {},
@@ -129,7 +134,7 @@ export default {
           title: "지역",
           value: "region",
           width: "25%",
-          style: { color: "#999999" },
+          style: {},
         },
         {
           key: 1,
